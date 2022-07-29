@@ -1,6 +1,6 @@
 name: ServerStuff
 version: 1.0.0.0
-main: net.minecraft.serverstuff.ServerStuff
+main: main.serverstuff.ServerStuff
 api-version: 1.13
 authors: [TonimatasMC, danizml]
 description: Add a lot of things.
