@@ -1,6 +1,6 @@
 name: AllInOne
-version: '${version}'
+version: 1.0.0.0
 main: net.minecraft.allinone.AllInOne
-api-version: 1.19
+api-version: 1.13
 authors: [ TonimatasMC, danizml ]
-description: Add a lot of thigns.
+description: Add a lot of things.
