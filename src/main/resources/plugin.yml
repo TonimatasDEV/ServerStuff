@@ -11,9 +11,16 @@ commands:
     permission: serverstuff.plugin
   serverstuff:
     description: MainCommand
-    permission: serverstuff.severstuff
+    permission: serverstuff.serverstuff
 
 permissions:
+  serverstuff.*:
+    description: Main plugin permission.
+    default: false
+    children:
+      - serverstuff.serverstuff.*
+      - serverstuff.plugin.*
+
   serverstuff.serverstuff.*:
     description: Main command permission.
     default: false
