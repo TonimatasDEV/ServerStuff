@@ -1,0 +1,6 @@
+name: AllInOne
+version: '${version}'
+main: net.minecraft.allinone.AllInOne
+api-version: 1.19
+authors: [ TonimatasMC, danizml ]
+description: Add a lot of thigns.
