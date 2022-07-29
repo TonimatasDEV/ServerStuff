@@ -1,6 +1,6 @@
 name: ServerStuff
 version: 1.0.0.0
-main: net.minecraft.serverstufff.ServerStuff
+main: net.minecraft.serverstuff.ServerStuff
 api-version: 1.13
 authors: [TonimatasMC, danizml]
 description: Add a lot of things.
@@ -9,8 +9,18 @@ commands:
   plugin:
     description: Enable or disable plugins.
     permission: serverstuff.plugin
+  serverstuff:
+    description: MainCommand
+    permission: serverstuff.severstuff
 
 permissions:
+  serverstuff.serverstuff.*:
+    description: Main command permission.
+    default: false
+    children:
+      - serverstuff.reload
+      - serverstuff.help
+
   serverstuff.plugin.*:
     description: Plugin command permission.
     default: false
@@ -25,3 +35,12 @@ permissions:
   serverstuff.plugin.disable:
     description: Disable plugin command permission.
     default: false
+
+  serverstuff.help:
+    description: help command permission.
+    default: false
+
+  serverstuff.reload:
+    description: Reload the plugin permission.
+    default: false
+
