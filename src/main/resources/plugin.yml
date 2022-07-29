@@ -1,6 +1,6 @@
-name: AllInOne
+name: ServerStuff
 version: 1.0.0.0
-main: net.minecraft.allinone.AllInOne
+main: net.minecraft.serverstufff.ServerStuff
 api-version: 1.13
-authors: [ TonimatasMC, danizml ]
+authors: [TonimatasMC, danizml]
 description: Add a lot of things.
