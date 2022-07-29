@@ -16,38 +16,32 @@ commands:
 permissions:
   serverstuff.*:
     description: Main plugin permission.
-    default: false
     children:
       - serverstuff.serverstuff.*
       - serverstuff.plugin.*
 
   serverstuff.serverstuff.*:
     description: Main command permission.
-    default: false
     children:
       - serverstuff.reload
       - serverstuff.help
 
   serverstuff.plugin.*:
     description: Plugin command permission.
-    default: false
     children:
       - serverstuff.plugin.enable
       - serverstuff.plugin.disable
 
   serverstuff.plugin.enable:
     description: Enable plugin command permission.
-    default: false
 
   serverstuff.plugin.disable:
     description: Disable plugin command permission.
-    default: false
 
   serverstuff.help:
     description: help command permission.
-    default: false
 
   serverstuff.reload:
     description: Reload the plugin permission.
-    default: false
+
 
