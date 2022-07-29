@@ -6,6 +6,9 @@ authors: [TonimatasMC, danizml]
 description: Add a lot of things.
 
 commands:
+  fly:
+    description: Fly command
+    permission: serverstuff.fly
   plugin:
     description: Enable or disable plugins.
     permission: serverstuff.plugin
@@ -43,5 +46,11 @@ permissions:
 
   serverstuff.reload:
     description: Reload the plugin permission.
+
+  serverstuff.fly.other:
+    description: Fly other permission.
+
+  serverstuff.fly:
+    description: Fly permission.
 
 
