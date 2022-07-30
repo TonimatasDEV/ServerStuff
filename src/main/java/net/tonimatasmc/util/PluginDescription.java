@@ -9,6 +9,7 @@ import org.bukkit.plugin.PluginLoadOrder;
 import java.util.List;
 import java.util.Map;
 
+@SuppressWarnings("unused")
 public class PluginDescription {
     private static final PluginDescriptionFile pdffile = ServerStuff.getInstance().getDescription();
     private static Map<String, Map<String, Object>> commands;
