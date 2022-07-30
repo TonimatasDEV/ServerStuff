@@ -13,7 +13,7 @@ public final class ServerStuff extends JavaPlugin {
     public void onEnable() {
         INSTANCE = this;
         Config.registerConfig();
-        Messages.getMessages();
+        Messages.registerMessages();
         TonimatasMC.enable();
         danizml.enable();
     }

@@ -15,6 +15,10 @@ commands:
   serverstuff:
     description: MainCommand
     permission: serverstuff.serverstuff
+  warp:
+    description: Warp command
+    permission: serverstuff.warp
+
 
 permissions:
   serverstuff.*:
