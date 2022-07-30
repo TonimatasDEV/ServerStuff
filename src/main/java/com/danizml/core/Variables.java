@@ -1,24 +1,44 @@
 package com.danizml.core;
 
+import main.serverstuff.ServerStuff;
 import org.bukkit.Bukkit;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 
 public class Variables {
-    public static void sendWithReplacement(Player player, String message) {
+    public static void sendToPlayerWithReplacement(Player player, String message) {
+        player.sendMessage(message
+                //Stats
+                .replaceAll("%player_deaths%", String.valueOf(player.getStatistic(Statistic.DEATHS)))
+                .replaceAll("%player_kills%", String.valueOf(player.getStatistic(Statistic.PLAYER_KILLS)))
+                .replaceAll("%mob_kills%", String.valueOf(player.getStatistic(Statistic.MOB_KILLS)))
+                .replaceAll("%fish_caught%", String.valueOf(player.getStatistic(Statistic.FISH_CAUGHT)))
+                .replaceAll("%jumps%", String.valueOf(player.getStatistic(Statistic.JUMP)))
+                .replaceAll("%mien_blocks%", String.valueOf(player.getStatistic(Statistic.MINE_BLOCK)))
 
-        //Variables
-        Bukkit.broadcastMessage(message.replaceAll("%xp%", String.valueOf(player.getExp())));
-        Bukkit.broadcastMessage(message.replaceAll("%player_uuid%", String.valueOf(player)));
-        Bukkit.broadcastMessage(message.replaceAll("%player_name%", String.valueOf(player.getName())));
-        Bukkit.broadcastMessage(message.replaceAll("%world%", String.valueOf(player.getWorld())));
+                //Variables
+                .replaceAll("%world%", player.getWorld().getName())
+                .replaceAll("%xp%", String.valueOf(player.getExp()))
+                .replaceAll("%player_uuid%", String.valueOf(player.getUniqueId()))
+                .replaceAll("%player_name%", player.getName())
+        );
+    }
 
-        //Statistic
-        Bukkit.broadcastMessage(message.replaceAll("%player_kills%", String.valueOf(player.getStatistic(Statistic.PLAYER_KILLS))));
-        Bukkit.broadcastMessage(message.replaceAll("%player_deaths%", String.valueOf(player.getStatistic(Statistic.DEATHS))));
-        Bukkit.broadcastMessage(message.replaceAll("%mob_kills%", String.valueOf(player.getStatistic(Statistic.MOB_KILLS))));
-        Bukkit.broadcastMessage(message.replaceAll("%fish_caught%", String.valueOf(player.getStatistic(Statistic.FISH_CAUGHT))));
-        Bukkit.broadcastMessage(message.replaceAll("%jumps%", String.valueOf(player.getStatistic(Statistic.JUMP))));
-        Bukkit.broadcastMessage(message.replaceAll("%mien_blocks%", String.valueOf(player.getStatistic(Statistic.MINE_BLOCK))));
+    public static void sendToAllWithReplacement(Player player, String message) {
+        Bukkit.broadcastMessage(message
+                //Stats
+                .replaceAll("%player_deaths%", String.valueOf(player.getStatistic(Statistic.DEATHS)))
+                .replaceAll("%player_kills%", String.valueOf(player.getStatistic(Statistic.PLAYER_KILLS)))
+                .replaceAll("%mob_kills%", String.valueOf(player.getStatistic(Statistic.MOB_KILLS)))
+                .replaceAll("%fish_caught%", String.valueOf(player.getStatistic(Statistic.FISH_CAUGHT)))
+                .replaceAll("%jumps%", String.valueOf(player.getStatistic(Statistic.JUMP)))
+                .replaceAll("%mien_blocks%", String.valueOf(player.getStatistic(Statistic.MINE_BLOCK)))
+
+                //Variables
+                .replaceAll("%world%", player.getWorld().getName())
+                .replaceAll("%xp%", String.valueOf(player.getExp()))
+                .replaceAll("%player_uuid%", String.valueOf(player.getUniqueId()))
+                .replaceAll("%player_name%", player.getName())
+        );
     }
 }
