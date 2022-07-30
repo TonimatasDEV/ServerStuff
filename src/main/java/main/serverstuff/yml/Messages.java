@@ -18,7 +18,9 @@ public class Messages {
     public static FileConfiguration getMessages() {
         if (messages == null) {
             reloadMessages();
-        }return messages;
+        }
+
+        return messages;
     }
 
     public static void reloadMessages() {
@@ -27,7 +29,6 @@ public class Messages {
         }
 
         messages = YamlConfiguration.loadConfiguration(messagesFile);
-
         Reader defConfigStream = new InputStreamReader(Objects.requireNonNull(ServerStuff.getInstance().getResource("messages.yml")), StandardCharsets.UTF_8);
 
         YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
