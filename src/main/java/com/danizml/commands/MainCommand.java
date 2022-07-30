@@ -1,10 +1,9 @@
 package com.danizml.commands;
 
 import main.serverstuff.ServerStuff;
-import main.serverstuff.yml.Config;
 import main.serverstuff.yml.Messages;
-import net.tonimatasmc.util.MessageColor;
-import net.tonimatasmc.util.PermissionMessage;
+import net.tonimatasmc.util.MessageVariables;
+import net.tonimatasmc.util.UsedMessages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,31 +16,27 @@ public class MainCommand implements CommandExecutor {
             if (args.length >= 2) {
                 if (args[0].equalsIgnoreCase("help")) {
                     if (sender.hasPermission("serverstuff.help")) {
-
-                        //help message
-                        MessageColor.sendToPlayer((Player) sender, "&6ServerStuff &8&l> &6Help");
-                        MessageColor.sendToPlayer((Player) sender, "&8&l[&5+&8&l] &5/serverstuff help");
-                        MessageColor.sendToPlayer((Player) sender, "&8&l[&5+&8&l] &5/serverstuff reload");
+                        //Help message
+                        MessageVariables.sendToPlayer((Player) sender, null, "&6ServerStuff &8&l> &6Help");
+                        MessageVariables.sendToPlayer((Player) sender, null, "&8&l[&5+&8&l] &5/serverstuff help");
+                        MessageVariables.sendToPlayer((Player) sender, null, "&8&l[&5+&8&l] &5/serverstuff reload");
 
                     } else {
                         //Class "PermissionMessage"
-                        PermissionMessage.nonPermission((Player) sender);
+                        UsedMessages.nonPermission((Player) sender);
                     }
-
                 } else if (args[0].equalsIgnoreCase("reload")) {
                     if (sender.hasPermission("serverstuff.reload")) {
-
-                        //reload plugin
+                        //Reload plugin
                         ServerStuff.getInstance().reloadConfig();
                         Messages.reloadMessages();
-                        MessageColor.sendToPlayer((Player) sender, "&6ServerStuff &8&l> &9Plugin Reloaded");
-
+                        MessageVariables.sendToPlayer((Player) sender, null, "&6ServerStuff &8&l> &9Plugin Reloaded");
                     } else {
-                        PermissionMessage.nonPermission((Player) sender);
+                        UsedMessages.nonPermission((Player) sender);
                     }
                 }
             } else {
-                MessageColor.sendToPlayer((Player) sender, "&4[Error]: &7Syntax error.");
+                UsedMessages.syntaxError((Player) sender);
             }
         }
         return false;

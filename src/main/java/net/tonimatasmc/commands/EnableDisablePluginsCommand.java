@@ -1,8 +1,8 @@
 package net.tonimatasmc.commands;
 
 import main.serverstuff.ServerStuff;
-import net.tonimatasmc.util.MessageColor;
-import net.tonimatasmc.util.PermissionMessage;
+import net.tonimatasmc.util.MessageVariables;
+import net.tonimatasmc.util.UsedMessages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,15 +22,15 @@ public class EnableDisablePluginsCommand implements CommandExecutor {
                             Plugin plugin = ServerStuff.getInstance().getServer().getPluginManager().getPlugin(args[1]);
                             if (plugin != null && !plugin.getName().equalsIgnoreCase("ServerStuff")) {
                                 ServerStuff.getInstance().getServer().getPluginManager().enablePlugin(plugin);
-                                MessageColor.sendToPlayer(player, "&2[Success]: &7The plugin has been enabled.");
+                                MessageVariables.sendToPlayer(player, null, "&2[Success]: &7The plugin has been enabled.");
                             } else {
-                                MessageColor.sendToPlayer(player, "&4[Error]: &7You put a invalid plugin.");
+                                MessageVariables.sendToPlayer(player, null, "&4[Error]: &7You put a invalid plugin.");
                             }
                         } else {
-                            MessageColor.sendToPlayer(player, "&4[Error]: &7Syntax error.");
+                            UsedMessages.syntaxError(player);
                         }
                     } else {
-                        PermissionMessage.nonPermission(player);
+                        UsedMessages.nonPermission(player);
                     }
                 } else if (args[1].equalsIgnoreCase("disable")) {
                     if (player.hasPermission("serverstuff.plugin.enable") || player.hasPermission("serverstuff.plugin.*")) {
@@ -39,19 +39,19 @@ public class EnableDisablePluginsCommand implements CommandExecutor {
 
                             if (plugin != null && !plugin.getName().equalsIgnoreCase("ServerStuff")) {
                                 ServerStuff.getInstance().getServer().getPluginManager().disablePlugin(plugin);
-                                MessageColor.sendToPlayer(player, "&2[Success]: &7The plugin has been disabled.");
+                                MessageVariables.sendToPlayer(player, null, "&2[Success]: &7The plugin has been disabled.");
                             } else {
-                                MessageColor.sendToPlayer(player, "&4[Error]: &7You put a invalid plugin.");
+                                MessageVariables.sendToPlayer(player, null, "&4[Error]: &7You put a invalid plugin.");
                             }
                         } else {
-                            MessageColor.sendToPlayer(player, "&4[Error]: &7Syntax error.");
+                            UsedMessages.syntaxError(player);
                         }
                     } else {
-                        PermissionMessage.nonPermission(player);
+                        UsedMessages.nonPermission(player);
                     }
                 }
             } else {
-                MessageColor.sendToPlayer(player, "&4[Error]: &7Syntax error.");
+                UsedMessages.syntaxError(player);
             }
         }return false;
     }
