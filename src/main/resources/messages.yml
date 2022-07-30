@@ -1,1 +1,11 @@
 #Messages of the plugin.
+Messages:
+  SyntaxError: "&4[Error]: &7Syntax error."
+
+  speedCommand:
+    flySpeed: "Your flight speed has changed to: %fly_speed%"
+    flySpeedOther: "You have changed %player% flight speed to: %fly_speed%"
+    walkSpeed: "Your walking speed has changed to: %walk_speed%"
+    walkSpeedOther: "You have Changed %player_name_other% walking speed to: %walk_speed%"
+    bothSpeed: "Your walking speed has changed to: %both_speed%"
+    bothSpeedOther: "You have Changed %player_name_other% walking speed to: %both_speed%"

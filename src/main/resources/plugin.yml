@@ -15,9 +15,10 @@ commands:
   serverstuff:
     description: MainCommand
     permission: serverstuff.serverstuff
-  warp:
-    description: Warp command
-    permission: serverstuff.warp
+  speed:
+    description: Speed command.
+    permission: serverstuff.speed
+
 
 
 permissions:
@@ -26,6 +27,38 @@ permissions:
     children:
       - serverstuff.serverstuff.*
       - serverstuff.plugin.*
+  serverstuff.speed.*:
+    description: Speed command permission.
+    children:
+      - serverstuff.speed.fly
+      - serverstuff.speed.walk
+      - serverstuff.speed.both
+      - serverstuff.speed.other.*
+
+  serverstuff.speed.fly:
+    description: Speed command permission.
+
+  serverstuff.speed.walk:
+    description: Speed command permission.
+
+  serverstuff.speed.both:
+    description: Speed command permission.
+
+  serverstuff.speed.other.*:
+    description: Speed other command permission.
+    children:
+      - serverstuff.speed.other.fly
+      - serverstuff.speed.other.both
+      - serverstuff.speed.other.walk
+
+  serverstuff.speed.other.fly:
+    description: Speed command permission.
+
+  serverstuff.speed.other.walk:
+    description: Speed other command permission.
+
+  serverstuff.speed.other.both:
+    description: Speed other command permission.
 
   serverstuff.serverstuff.*:
     description: Main command permission.

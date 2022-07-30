@@ -1,3 +1,4 @@
 Config:
   Permission-error: true
   Permission-message: "&8&l<&6ServerStuff&8&l> &9You dont have Permissions"
+  SyntaxError: ""
