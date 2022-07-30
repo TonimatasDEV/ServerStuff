@@ -3,7 +3,6 @@ package net.tonimatasmc.commands;
 import main.serverstuff.ServerStuff;
 import net.tonimatasmc.util.MessageColor;
 import net.tonimatasmc.util.PermissionMessage;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,7 +20,6 @@ public class EnableDisablePluginsCommand implements CommandExecutor {
                     if (player.hasPermission("serverstuff.plugin.enable") || player.hasPermission("serverstuff.plugin.*")) {
                         if (!args[1].isEmpty()) {
                             Plugin plugin = ServerStuff.getInstance().getServer().getPluginManager().getPlugin(args[1]);
-
                             if (plugin != null && !plugin.getName().equalsIgnoreCase("ServerStuff")) {
                                 ServerStuff.getInstance().getServer().getPluginManager().enablePlugin(plugin);
                                 MessageColor.sendToPlayer(player, "&2[Success]: &7The plugin has been enabled.");
