@@ -9,3 +9,11 @@ Messages:
     walkSpeedOther: "You have Changed %player_name_other% walking speed to: %walk_speed%"
     bothSpeed: "Your walking speed has changed to: %both_speed%"
     bothSpeedOther: "You have Changed %player_name_other% walking speed to: %both_speed%"
+
+  Fly-Command:
+    On-Message: "&6ServerStuff &8&l> &8Fly is now Enable"
+    Off-Message: "&6ServerStuff &8&l> &8Fly is now Disable"
+    Off-Message-Target: "&6ServerStuff &8&l> &8Fly is now Enable for %player%"
+    On-Message-Target: "&6ServerStuff &8&l> &8Fly is now Disable for %player%"
+
+
