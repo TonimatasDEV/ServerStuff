@@ -1,8 +1,6 @@
 package main.serverstuff;
 
 import com.danizml.danizml;
-import main.serverstuff.yml.Config;
-import main.serverstuff.yml.Messages;
 import net.tonimatasmc.TonimatasMC;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,8 +10,6 @@ public final class ServerStuff extends JavaPlugin {
     @Override
     public void onEnable() {
         INSTANCE = this;
-        Config.registerConfig();
-        Messages.registerMessages();
         TonimatasMC.enable();
         danizml.enable();
     }
