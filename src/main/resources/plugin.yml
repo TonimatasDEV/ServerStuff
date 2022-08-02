@@ -18,7 +18,9 @@ commands:
   speed:
     description: Speed command.
     permission: serverstuff.speed
-
+  tpa:
+    description: Tpa command.
+    permission: serverstuff.tpa
 
 
 permissions:
