@@ -1,11 +1,9 @@
 package net.tonimatasmc.commands;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Syntax;
 import main.serverstuff.ServerStuff;
 import main.serverstuff.yml.Players;
 import net.tonimatasmc.util.MessageVariables;
 import net.tonimatasmc.util.UsedMessages;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.Command;
