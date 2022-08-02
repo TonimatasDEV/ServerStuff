@@ -40,7 +40,7 @@ permissions:
       - serverstuff.speed.*
       - serverstuff.tpoffline
       - serverstuff.fly.*
-      - serverstuff.workbench
+      - serverstuff.workbench.*
 
   serverstuff.speed.*:
     description: Speed command permission.
@@ -113,5 +113,15 @@ permissions:
     children:
       - serverstuff.fly
       - serverstuff.fly.other
+
+  serverstuff.workbench.*:
+    description: Workbench command other permission.
+    children:
+      - serverstuff.workbench.other
+      - serverstuff.workbench
+
+  serverstuff.workbench.other:
+    description: Workbench command other permission.
+
   serverstuff.workbench:
-    description: Workbench command.
+    description: Workbench command permission.
