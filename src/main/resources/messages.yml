@@ -1,6 +1,8 @@
 #Messages of the plugin.
 Messages:
   SyntaxError: "&4[Error]: &7Syntax error."
+  TargetNotFound: "&4[Error]: &7Target isn't online."
+
 
   speedCommand:
     flySpeed: "Your flight speed has changed to: %fly_speed%"

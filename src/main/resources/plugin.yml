@@ -24,6 +24,11 @@ commands:
   tpoffline:
     description: Tp offline command.
     permission: serverstuff.tpoffline
+  workbench:
+    description: workbench.
+    permission: serverstuff.workbench
+    aliases:
+      - wb
 
 
 permissions:
@@ -35,6 +40,7 @@ permissions:
       - serverstuff.speed.*
       - serverstuff.tpoffline
       - serverstuff.fly.*
+      - serverstuff.workbench
 
   serverstuff.speed.*:
     description: Speed command permission.
@@ -107,3 +113,5 @@ permissions:
     children:
       - serverstuff.fly
       - serverstuff.fly.other
+  serverstuff.workbench:
+    description: Workbench command.
