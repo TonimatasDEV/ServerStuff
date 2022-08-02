@@ -17,10 +17,21 @@ public class TabCompleter implements org.bukkit.command.TabCompleter {
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         ArrayList<String> argList = new ArrayList<>();
 
+        if (command.getName().equalsIgnoreCase("tpoffline")) {
+            if (args.length == 1) {
+                for (Player p : Bukkit.getOnlinePlayers()) {
+                    argList.add(p.getName());
+                }
+
+                return argList.stream().filter((a) -> a.startsWith(args[0])).collect(Collectors.toList());
+            }
+        }
+
         if (command.getName().equalsIgnoreCase("plugin")) {
             if (args.length == 1) {
                 argList.add("enable");
                 argList.add("disable");
+
                 return argList.stream().filter((a) -> a.startsWith(args[0])).collect(Collectors.toList());
             } else if (args.length == 2 && args[0].equalsIgnoreCase("enable") || args[0].equalsIgnoreCase("disable")) {
                 Plugin[] var6 = Bukkit.getPluginManager().getPlugins();

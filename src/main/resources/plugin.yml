@@ -21,6 +21,9 @@ commands:
   tpa:
     description: Tpa command.
     permission: serverstuff.tpa
+  tpoffline:
+    description: Tp offline command.
+    permission: serverstuff.tpoffline
 
 
 permissions:
@@ -29,6 +32,10 @@ permissions:
     children:
       - serverstuff.serverstuff.*
       - serverstuff.plugin.*
+      - serverstuff.speed.*
+      - serverstuff.tpoffline
+      - serverstuff.fly.*
+
   serverstuff.speed.*:
     description: Speed command permission.
     children:
@@ -36,6 +43,9 @@ permissions:
       - serverstuff.speed.walk
       - serverstuff.speed.both
       - serverstuff.speed.other.*
+
+  serverstuff.tpoffline:
+    description: Tp offline command permission.
 
   serverstuff.speed.fly:
     description: Speed command permission.
@@ -92,4 +102,8 @@ permissions:
   serverstuff.fly:
     description: Fly permission.
 
-
+  serverstuff.fly.*:
+    description: All fly permissions.
+    children:
+      - serverstuff.fly
+      - serverstuff.fly.other

@@ -2,6 +2,7 @@ package net.tonimatasmc.managers;
 
 import net.tonimatasmc.commands.EnableDisablePluginsCommand;
 import net.tonimatasmc.commands.SpeedCommand;
+import net.tonimatasmc.commands.TPOfflinePlayerCommand;
 import net.tonimatasmc.tabCompleter.TabCompleter;
 import org.bukkit.Bukkit;
 
@@ -12,5 +13,8 @@ public class CommandManager {
 
         Bukkit.getServer().getPluginCommand("speed").setExecutor(new SpeedCommand());
         Bukkit.getServer().getPluginCommand("speed").setTabCompleter(new TabCompleter());
+
+        Bukkit.getServer().getPluginCommand("tpoffline").setExecutor(new TPOfflinePlayerCommand());
+        Bukkit.getServer().getPluginCommand("tpoffline").setTabCompleter(new TabCompleter());
     }
 }
