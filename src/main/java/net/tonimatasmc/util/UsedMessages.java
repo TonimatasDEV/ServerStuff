@@ -13,6 +13,9 @@ public class UsedMessages {
 
     public static void syntaxError(Player player) {
         MessageVariables.sendToPlayer(player, null, Messages.getMessages().getString("Messages.SyntaxError"));
+    }
 
+    public static void targetNotOnline(Player target) {
+        MessageVariables.sendToPlayer(target, null, Messages.getMessages().getString("Messages.TargetNotFound"));
     }
 }
