@@ -7,6 +7,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class ServerStuff extends JavaPlugin {
     private static ServerStuff INSTANCE;
 
+    public static ServerStuff getInstance() {
+        return INSTANCE;
+    }
+
     @Override
     public void onEnable() {
         INSTANCE = this;
@@ -18,9 +22,5 @@ public final class ServerStuff extends JavaPlugin {
     public void onDisable() {
         TonimatasMC.disable();
         danizml.disable();
-    }
-
-    public static ServerStuff getInstance() {
-        return INSTANCE;
     }
 }

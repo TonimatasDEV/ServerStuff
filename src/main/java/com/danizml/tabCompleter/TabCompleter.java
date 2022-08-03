@@ -19,6 +19,7 @@ public class TabCompleter implements org.bukkit.command.TabCompleter {
                 argList.add("reload");
                 return argList.stream().filter(a -> a.startsWith(args[0])).collect(Collectors.toList());
             }
-        }return null;
+        }
+        return null;
     }
 }
