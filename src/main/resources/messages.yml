@@ -15,7 +15,7 @@ Messages:
   Fly-Command:
     On-Message: "&6ServerStuff &8&l> &8Fly is now Enable"
     Off-Message: "&6ServerStuff &8&l> &8Fly is now Disable"
-    Off-Message-Target: "&6ServerStuff &8&l> &8Fly is now Enable for %player%"
-    On-Message-Target: "&6ServerStuff &8&l> &8Fly is now Disable for %player%"
+    Off-Message-Target: "&6ServerStuff &8&l> &8Fly is now Enable for: %player_name_other%"
+    On-Message-Target: "&6ServerStuff &8&l> &8Fly is now Disable for: %player_name_other%"
 
 

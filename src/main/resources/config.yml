@@ -5,9 +5,9 @@ Config:
 
 Custom-Join:
   Enable: true
-  message: "&8join the server"
+  Message: "&8join the server"
 
 Custom-Leave:
   Enable: true
-  message: "&8leave the server"
+  Message: "&8leave the server"
 
