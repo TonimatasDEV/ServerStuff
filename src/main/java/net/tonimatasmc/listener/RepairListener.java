@@ -14,8 +14,8 @@ public class RepairListener implements Listener {
     @EventHandler
     public void onAnvilGUIClick(InventoryClickEvent event) {
         if (event.getInventory().getType() == InventoryType.ANVIL && event.getWhoClicked() instanceof Player) {
-            Player player = (Player)event.getWhoClicked();
-            AnvilInventory inv = (AnvilInventory)event.getInventory();
+            Player player = (Player) event.getWhoClicked();
+            AnvilInventory inv = (AnvilInventory) event.getInventory();
             AnvilTask task = AnvilTask.getTask(inv);
 
             if (task == null) {

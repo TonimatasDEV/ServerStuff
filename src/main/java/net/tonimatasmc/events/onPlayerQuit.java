@@ -16,7 +16,7 @@ public class onPlayerQuit implements Listener {
                 player.getLocation().getWorld().getName() + "-" +
                 player.getLocation().getBlockX() + "-" +
                 player.getLocation().getBlockY() + "-" +
-                player.getLocation().getBlockZ() + "-" +"\"");
+                player.getLocation().getBlockZ() + "-" + "\"");
         Players.savePlayers();
         Players.reloadPlayers();
     }

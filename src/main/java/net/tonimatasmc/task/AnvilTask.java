@@ -27,7 +27,7 @@ public class AnvilTask extends BukkitRunnable {
         return anvilTasks.get(inv);
     }
 
- public static boolean hasPermission(Player p) {
+    public static boolean hasPermission(Player p) {
         return p.hasPermission("serverstuff.anvilcolors");
     }
 

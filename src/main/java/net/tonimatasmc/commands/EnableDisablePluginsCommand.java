@@ -53,7 +53,8 @@ public class EnableDisablePluginsCommand implements CommandExecutor {
             } else {
                 UsedMessages.syntaxError(player);
             }
-        }return false;
+        }
+        return false;
     }
 }
 
