@@ -18,4 +18,10 @@ Messages:
     Off-Message-Target: "&6ServerStuff &8&l> &8Fly is now Enable for: %player_name_other%"
     On-Message-Target: "&6ServerStuff &8&l> &8Fly is now Disable for: %player_name_other%"
 
+  godCommand:
+    godEnableOther: "You has been enabled the %player_name_other% god mode."
+    godDisableOther: "You has been disabled the %player_name_other% god mode."
+    godEnable: "God Mode has been enable."
+    godDisable: "God Mode has been disabled."
+
 
