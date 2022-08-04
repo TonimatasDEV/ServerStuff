@@ -29,7 +29,9 @@ commands:
     permission: serverstuff.workbench
     aliases:
       - wb
-
+  god:
+    description: God command.
+    permission: serverstuff.god
 
 permissions:
   serverstuff.*:
