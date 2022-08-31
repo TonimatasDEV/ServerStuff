@@ -20,7 +20,7 @@ public final class ServerStuff extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        TonimatasMC.disable();
         danizml.disable();
+        TonimatasMC.disable();
     }
 }
