@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+@SuppressWarnings("unused")
 public class MessageVariables {
     public static void sendToPlayer(Player player, Player target, String message) {
         if (player != null) {
@@ -24,8 +25,7 @@ public class MessageVariables {
                     .replaceAll("%player_name%", player.getName())
                     .replaceAll("%both_speed%", String.valueOf(player.getFlySpeed()))
                     .replaceAll("%walk_speed%", String.valueOf(player.getWalkSpeed()))
-                    .replaceAll("%fly_speed%", String.valueOf(player.getFlySpeed()))
-            ;
+                    .replaceAll("%fly_speed%", String.valueOf(player.getFlySpeed()));
 
             if (target != null) {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', phase
@@ -96,8 +96,7 @@ public class MessageVariables {
                     .replaceAll("%player_name%", player.getName())
                     .replaceAll("%both_speed%", String.valueOf(player.getFlySpeed()))
                     .replaceAll("%walk_speed%", String.valueOf(player.getWalkSpeed()))
-                    .replaceAll("%fly_speed%", String.valueOf(player.getFlySpeed()))
-                    ;
+                    .replaceAll("%fly_speed%", String.valueOf(player.getFlySpeed()));
 
             if (target != null) {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', phase
