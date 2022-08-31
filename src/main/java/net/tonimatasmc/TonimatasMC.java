@@ -12,7 +12,7 @@ public class TonimatasMC {
         PluginDescription.register();
         CommandManager.register();
         EventManager.register();
-        AnvilTask.ColoredAnvils();
+        AnvilTask.register();
     }
 
     public static void disable() {

@@ -75,7 +75,7 @@ public class AnvilTask extends BukkitRunnable {
         item.setItemMeta(itemMeta);
     }
 
-    public static void ColoredAnvils() {
+    public static void register() {
         ServerStuff.getInstance().getServer().getPluginManager().registerEvents(new RepairListener(), ServerStuff.getInstance());
         ServerStuff.getInstance().saveDefaultConfig();
     }
