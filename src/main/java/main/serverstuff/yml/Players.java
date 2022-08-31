@@ -30,7 +30,6 @@ public class Players {
 
         players = YamlConfiguration.loadConfiguration(playersFile);
         Reader defConfigStream = new InputStreamReader(Objects.requireNonNull(ServerStuff.getInstance().getResource("players.yml")), StandardCharsets.UTF_8);
-
         YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
         players.setDefaults(defConfig);
     }
@@ -38,8 +37,8 @@ public class Players {
     public static void savePlayers() {
         try {
             players.save(playersFile);
-        } catch (IOException var2) {
-            var2.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
 

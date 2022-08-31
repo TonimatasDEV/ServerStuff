@@ -30,7 +30,6 @@ public class Messages {
 
         messages = YamlConfiguration.loadConfiguration(messagesFile);
         Reader defConfigStream = new InputStreamReader(Objects.requireNonNull(ServerStuff.getInstance().getResource("messages.yml")), StandardCharsets.UTF_8);
-
         YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
         messages.setDefaults(defConfig);
     }
