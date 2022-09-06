@@ -1,7 +1,7 @@
-package net.tonimatasmc.managers;
+package net.tonimatasdev.managers;
 
-import net.tonimatasmc.commands.*;
-import net.tonimatasmc.tabCompleter.TabCompleter;
+import net.tonimatasdev.commands.*;
+import net.tonimatasdev.tabCompleter.TabCompleter;
 import org.bukkit.Bukkit;
 
 public class CommandManager {

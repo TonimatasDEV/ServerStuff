@@ -1,10 +1,9 @@
 package com.danizml.commands;
 
 import main.serverstuff.ServerStuff;
-import main.serverstuff.yml.Messages;
-import main.serverstuff.yml.Players;
-import net.tonimatasmc.util.MessageVariables;
-import net.tonimatasmc.util.UsedMessages;
+import net.tonimatasdev.managers.YMLManager;
+import net.tonimatasdev.util.MessageVariables;
+import net.tonimatasdev.util.UsedMessages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -30,8 +29,7 @@ public class MainCommand implements CommandExecutor {
                     if (sender.hasPermission("serverstuff.reload")) {
                         //Reload plugin
                         ServerStuff.getInstance().reloadConfig();
-                        Messages.reloadMessages();
-                        Players.reloadPlayers();
+                        YMLManager.reload();
                         MessageVariables.sendToPlayer((Player) sender, null, "&6ServerStuff &8&l> &9Plugin Reloaded");
                     } else {
                         UsedMessages.nonPermission((Player) sender);

@@ -1,4 +1,5 @@
-package net.tonimatasmc.util;
+package net.tonimatasdev.util;
 
 public class UpdateChecker {
+
 }

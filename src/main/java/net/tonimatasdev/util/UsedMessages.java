@@ -1,4 +1,4 @@
-package net.tonimatasmc.util;
+package net.tonimatasdev.util;
 
 import main.serverstuff.ServerStuff;
 import main.serverstuff.yml.Messages;

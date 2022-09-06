@@ -1,4 +1,4 @@
-package net.tonimatasmc.tabCompleter;
+package net.tonimatasdev.tabCompleter;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

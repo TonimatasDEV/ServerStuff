@@ -1,10 +1,10 @@
-package net.tonimatasmc.commands;
+package net.tonimatasdev.commands;
 
 import main.serverstuff.ServerStuff;
 import main.serverstuff.yml.Messages;
 import main.serverstuff.yml.Players;
-import net.tonimatasmc.util.MessageVariables;
-import net.tonimatasmc.util.UsedMessages;
+import net.tonimatasdev.util.MessageVariables;
+import net.tonimatasdev.util.UsedMessages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

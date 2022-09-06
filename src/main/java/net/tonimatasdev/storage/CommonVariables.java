@@ -1,4 +1,4 @@
-package net.tonimatasmc.storage;
+package net.tonimatasdev.storage;
 
 import org.bukkit.ChatColor;
 

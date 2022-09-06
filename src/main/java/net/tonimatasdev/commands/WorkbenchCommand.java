@@ -1,7 +1,7 @@
-package net.tonimatasmc.commands;
+package net.tonimatasdev.commands;
 
 import main.serverstuff.ServerStuff;
-import net.tonimatasmc.util.UsedMessages;
+import net.tonimatasdev.util.UsedMessages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

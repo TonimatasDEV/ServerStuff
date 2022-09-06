@@ -1,4 +1,4 @@
-package net.tonimatasmc.util;
+package net.tonimatasdev.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

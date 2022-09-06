@@ -1,4 +1,4 @@
-package net.tonimatasmc.events;
+package net.tonimatasdev.events;
 
 import main.serverstuff.yml.Players;
 import org.bukkit.entity.Player;

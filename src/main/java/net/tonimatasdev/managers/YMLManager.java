@@ -1,4 +1,4 @@
-package net.tonimatasmc.managers;
+package net.tonimatasdev.managers;
 
 import main.serverstuff.ServerStuff;
 import main.serverstuff.yml.Config;

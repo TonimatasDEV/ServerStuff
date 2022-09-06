@@ -1,7 +1,7 @@
 package main.serverstuff;
 
 import com.danizml.danizml;
-import net.tonimatasmc.TonimatasMC;
+import net.tonimatasdev.TonimatasDEV;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ServerStuff extends JavaPlugin {
@@ -14,13 +14,13 @@ public final class ServerStuff extends JavaPlugin {
     @Override
     public void onEnable() {
         INSTANCE = this;
-        TonimatasMC.enable();
+        TonimatasDEV.enable();
         danizml.enable();
     }
 
     @Override
     public void onDisable() {
         danizml.disable();
-        TonimatasMC.disable();
+        TonimatasDEV.disable();
     }
 }
