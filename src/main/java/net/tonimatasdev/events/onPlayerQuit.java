@@ -12,11 +12,7 @@ public class onPlayerQuit implements Listener {
     public void onPlayerQuitEvent(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
-        Players.getPlayers().set(player.getName() + ".lastLocation", "\"" +
-                player.getLocation().getWorld().getName() + "-" +
-                player.getLocation().getBlockX() + "-" +
-                player.getLocation().getBlockY() + "-" +
-                player.getLocation().getBlockZ() + "-" + "\"");
+        Players.getPlayers().set(player.getName() + ".lastLocation", player.getLocation());
         Players.savePlayers();
         Players.reloadPlayers();
     }

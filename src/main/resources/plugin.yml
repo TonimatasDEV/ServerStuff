@@ -38,7 +38,7 @@ permissions:
     description: Main plugin permission.
     children:
       - serverstuff.serverstuff.*
-      - serverstuff.plugin.*
+      - serverstuff.pluginmanager
       - serverstuff.speed.*
       - serverstuff.tpoffline
       - serverstuff.fly.*
@@ -87,16 +87,7 @@ permissions:
       - serverstuff.reload
       - serverstuff.help
 
-  serverstuff.plugin.*:
-    description: Plugin command permission.
-    children:
-      - serverstuff.plugin.enable
-      - serverstuff.plugin.disable
-
-  serverstuff.plugin.enable:
-    description: Enable plugin command permission.
-
-  serverstuff.plugin.disable:
+  serverstuff.pluginmanager:
     description: Disable plugin command permission.
 
   serverstuff.help:

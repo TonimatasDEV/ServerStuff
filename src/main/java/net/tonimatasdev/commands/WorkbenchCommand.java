@@ -1,44 +1,24 @@
 package net.tonimatasdev.commands;
 
-import main.serverstuff.ServerStuff;
+import net.tonimatasdev.util.Simplifier;
 import net.tonimatasdev.util.UsedMessages;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class WorkbenchCommand implements CommandExecutor {
+public class WorkbenchCommand extends Simplifier {
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("workbench") || command.getName().equalsIgnoreCase("wb")) {
-            if (!(sender instanceof Player)) {
-                sender.sendMessage("[&4Error&f]: You not a player.");
+    public WorkbenchCommand(Player player, String label, String[] args) {
+        assert playerHasPermission("serverstuff.workbench", player);
+
+        if (args.length == 1) {
+            player.openWorkbench(player.getLocation(), true);
+        } else {
+            assert playerHasPermission("serverstuff.workbench.other", player);
+
+            if (getPlayer(args[0]).isOnline()) {
+                getPlayer(args[0]).openWorkbench(player.getLocation(), true);
             } else {
-                Player player = (Player) sender;
-
-                if (player.hasPermission("serverstuff.workbench")) {
-                    if (args.length == 1) {
-                        if (player.hasPermission("serverstuff.workbench.other")) {
-                            Player target = ServerStuff.getInstance().getServer().getPlayer(args[0]);
-
-                            if (target.isOnline()) {
-                                target.openWorkbench(player.getLocation(), true);
-                            } else {
-                                UsedMessages.targetNotOnline(target);
-                            }
-                        } else {
-                            UsedMessages.nonPermission(player);
-                        }
-                    } else {
-                        player.openWorkbench(player.getLocation(), true);
-                    }
-                } else {
-                    UsedMessages.nonPermission(player);
-                }
+                UsedMessages.targetNotOnline(getPlayer(args[0]));
             }
         }
-
-        return false;
     }
 }
